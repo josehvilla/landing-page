@@ -1,0 +1,149 @@
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 430px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #ededed;
+  color: #222222;
+  height: 100vh;
+}
+
+header {
+  padding: 15px;
+  background-color: #1ca095;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: "Montserrat";
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 430px) {
+  header {
+    padding: 10px;
+  }
+}
+header div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+header div.icons {
+  gap: 8px;
+}
+header div p {
+  margin: 8px 0;
+}
+@media screen and (max-width: 430px) {
+  header div p {
+    margin: 6px 0;
+  }
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.25s ease;
+}
+header nav a:hover {
+  color: #282828;
+}
+header i {
+  width: 18px;
+}
+@media screen and (max-width: 430px) {
+  header i {
+    width: 14px;
+  }
+}
+header i img {
+  width: 100%;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 200px;
+  font-family: "Roboto";
+}
+@media screen and (max-width: 1024px) {
+  main {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main .section-1 h1 {
+  margin: 10px 0;
+  font-size: 4.375rem;
+}
+main .section-1 p {
+  font-size: 1.25rem;
+}
+main .section-1 span {
+  text-transform: uppercase;
+}
+main .section-1 button {
+  margin: 40px 0;
+  padding: 15px 25px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background-color: #1ca095;
+  transition: all 0.25s ease;
+}
+main .section-1 button:hover {
+  background-color: #199086;
+}
+main .section-2 {
+  margin: 120px 0;
+  display: flex;
+  gap: 50px;
+}
+@media screen and (max-width: 430px) {
+  main .section-2 {
+    display: none;
+  }
+}
+main .section-2 div {
+  width: 300px;
+  transition: all 0.7s ease;
+}
+main .section-2 div:hover {
+  margin-top: -10px;
+}
+main .section-2 div img {
+  width: 50px;
+}
+main .section-2 div h2 {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 400;
+}
+main .section-2 div p {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+}/*# sourceMappingURL=styles.css.map */

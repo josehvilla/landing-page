@@ -1,0 +1,175 @@
+@mixin ipad {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media screen and (max-width: 430px) {
+    @content;
+  }
+}
+
+html {
+  @include ipad {
+    font-size: 14px;
+  }
+
+  @include iphone {
+    font-size: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #ededed;
+  color: #222222;
+  height: 100vh;
+}
+
+header {
+  padding: 15px;
+  background-color: #1ca095;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: "Montserrat";
+  color: #fff;
+
+  @include ipad {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  @include iphone {
+    padding: 10px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &.icons {
+      gap: 8px;
+    }
+
+    p {
+      margin: 8px 0;
+
+      @include iphone {
+        margin: 6px 0;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: #282828;
+      }
+    }
+  }
+
+  i {
+    width: 18px;
+
+    @include iphone {
+      width: 14px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 200px;
+  font-family: "Roboto";
+
+  @include ipad {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .section-1 {
+    h1 {
+      margin: 10px 0;
+      font-size: 4.375rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+
+    button {
+      margin: 40px 0;
+      padding: 15px 25px;
+      color: #fff;
+      font-family: "Montserrat";
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background-color: #1ca095;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background-color: #199086;
+      }
+    }
+  }
+
+  .section-2 {
+    margin: 120px 0;
+    display: flex;
+    gap: 50px;
+
+    @include iphone {
+      display: none;
+    }
+
+    div {
+      width: 300px;
+      transition: all 0.7s ease;
+
+      &:hover {
+        margin-top: -10px;
+      }
+
+      img {
+        width: 50px;
+      }
+
+      h2 {
+        font-family: "Montserrat";
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      p {
+        font-family: "Open Sans";
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
